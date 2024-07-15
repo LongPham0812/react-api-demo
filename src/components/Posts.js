@@ -28,12 +28,17 @@ export default function Posts() {
 
   const startEditing = (post) => {
     setEditingPost(post);
-  }
+  };
 
   return (
     <div>
       <h1>Posts</h1>
-      <PostForm posts={posts} setPosts={setPosts}></PostForm>
+      <PostForm
+        posts={posts}
+        setPosts={setPosts}
+        editingPost={editingPost}
+        setEditingPost={setEditingPost}
+      ></PostForm>
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
